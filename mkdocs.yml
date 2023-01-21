@@ -1,6 +1,8 @@
 site_name: MNIST Universe
 site_url: https://ironbar.github.io/mnist_universe/
+# https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs
 theme:
   name: readthedocs
   analytics:
     gtag: G-4WDV0QB6W7
+  prev_next_buttons_location: both
