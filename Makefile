@@ -7,6 +7,7 @@ install: # install python dependencies
 deploy:
 	git push
 	mkdocs gh-deploy
+	make clean
 
 build:
 	mkdocs build
@@ -15,4 +16,4 @@ clean:
 	rm -r site
 
 open-website:
-	xdg-open https://ironbar.github.io/understanding_intelligence/ &
+	xdg-open https://ironbar.github.io/mnist_universe/ &
