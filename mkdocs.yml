@@ -1,3 +1,6 @@
 site_name: MNIST Universe
 site_url: https://ironbar.github.io/mnist_universe/
-theme: readthedocs
+theme:
+  name: readthedocs
+  analytics:
+    gtag: G-4WDV0QB6W7
