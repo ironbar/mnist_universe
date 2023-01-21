@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# MNIST Universe
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+![mnist_examples](https://upload.wikimedia.org/wikipedia/commons/2/27/MnistExamples.png)
 
-## Commands
+On this project I will take one of the most famous and simple datasets in the world, the MNIST dataset and I will think about how current artificial intelligence works, what are the differences with natural intelligence and how can we improve it.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+The name **MNIST Universe** comes from the fact that a model that is trained on the MNIST dataset only has access to a tiny fraction of the world. Its universe its limited to the 28x28 pixels of the images of the dataset.
