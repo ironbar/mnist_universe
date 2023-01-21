@@ -9,3 +9,4 @@ Thoughts about Artificial Intelligence using the toy dataset MNIST.
 
 - https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs
 - https://www.mkdocs.org/user-guide/choosing-your-theme/#readthedocs
+- https://github.com/ebadi/mkdocs2book
