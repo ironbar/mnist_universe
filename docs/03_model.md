@@ -6,6 +6,8 @@ In the case for the MNIST dataset the model will receive as input the value of t
 
 The neural networks are typically structure in layers. Each layer has its own set of operations and parameters. Thus a neural network is a mathematical function that is created by composing smaller functions that we called layers.
 
+$$ y = layer2(layer1(x)) $$
+
 TODO: add latex code showing composition of functions/layers
 
 The space of all the possible neural networks is infinite.

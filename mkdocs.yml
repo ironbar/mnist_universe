@@ -6,3 +6,7 @@ theme:
   analytics:
     gtag: G-4WDV0QB6W7
   prev_next_buttons_location: both
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+markdown_extensions:
+  - mdx_math
