@@ -9,3 +9,9 @@ descent algorithm. On the MNIST dataset we might be interested in maximizing the
 model. However the accuracy function is not differentiable. So we have to use a proxy loss function
 called cross-entropy loss with the hope that minimizing the cross-entropy loss will result in an increase
 of the model accuracy.
+
+This process is no different from function optimization. So what makes Deep Learning special?
+
+- Deep Learning works with huge models and datasets, and scales well with more data
+- Deep Learning imposes some constraints in the model: the model should have multiple sequential layers
+- Deep Learning has benefited from the increase of computing power and the increase in dataset sizes
