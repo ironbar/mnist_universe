@@ -12,6 +12,7 @@ of the model accuracy.
 
 This process is no different from function optimization. So what makes Deep Learning special?
 
-- Deep Learning works with huge models and datasets, and scales well with more data
+- Deep Learning scales well with model size and dataset size. We can get better models just by training
+  a bigger model on a bigger dataset.
 - Deep Learning imposes some constraints in the model: the model should have multiple sequential layers
 - Deep Learning has benefited from the increase of computing power and the increase in dataset sizes

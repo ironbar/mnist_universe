@@ -8,8 +8,6 @@ The neural networks are typically structure in layers. Each layer has its own se
 
 $$ y = layer2(layer1(x)) $$
 
-TODO: add latex code showing composition of functions/layers
-
 The space of all the possible neural networks is infinite.
 
 The choice of the type of layers, numbers and connectivity between the layers is called the model architecture.
