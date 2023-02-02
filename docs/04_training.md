@@ -14,5 +14,5 @@ This process is no different from function optimization. So what makes Deep Lear
 
 - Deep Learning scales well with model size and dataset size. We can get better models just by training
   a bigger model on a bigger dataset.
-- Deep Learning imposes some constraints in the model: the model should have multiple sequential layers
+- Deep Learning imposes some constraints in the model: the model should have multiple sequential layers. This imposes a bias towards hierarchical processing
 - Deep Learning has benefited from the increase of computing power and the increase in dataset sizes
