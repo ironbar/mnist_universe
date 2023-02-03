@@ -11,7 +11,7 @@ But in the other hand the model is just a mathematical function. It can only do 
 
 > The intelligence of a system is a measure of its skill-acquisition efficiency over a scope of tasks, with respect to priors, experience, and generalization difficulty.
 
-Chollet takes away the focus on skill (how good a model is on Go, chess, image classification…) and puts the focus on skill-acquisition efficiency. It says that if a task is fixed it it possible to bUy arbitrary levels of skill given unlimited priors or unlimited training data. It argues that training on more data does not make the system more intelligent.
+Chollet takes away the focus on skill (how good a model is on Go, chess, image classification…) and puts the focus on skill-acquisition efficiency. It says that if a task is fixed it it possible to buy arbitrary levels of skill given unlimited priors or unlimited training data. It argues that training on more data does not make the system more intelligent.
 
 > Adding ever more data to a local-generalization learning system is certainly a fair strategy if one’s end goal is skill on the task considered, but it will not lead to generalization beyond the data the system has seen
 
