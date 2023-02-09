@@ -30,4 +30,4 @@ We as humans experience time as it passes and we have memories. The typical NN d
 A child can interact with the world, this allows to test hypothesis and learn causality. However it seems that from data alone
 is not possible to infer causality[^1].
 
-[^1] https://stats.stackexchange.com/questions/384330/is-causal-inference-only-from-data-possible
+[^1]: https://stats.stackexchange.com/questions/384330/is-causal-inference-only-from-data-possible
