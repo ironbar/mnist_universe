@@ -26,3 +26,8 @@ When a baby grows it learns in a completely unsupervised way. It learns to crawl
 When a child learns to talk it start to receive a much informative reward signal from his parents. 
 
 We as humans experience time as it passes and we have memories. The typical NN do not have any notion of time nor memories. 
+
+A child can interact with the world, this allows to test hypothesis and learn causality. However it seems that from data alone
+is not possible to infer causality[^1].
+
+[^1] https://stats.stackexchange.com/questions/384330/is-causal-inference-only-from-data-possible
