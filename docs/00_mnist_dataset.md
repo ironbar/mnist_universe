@@ -12,5 +12,5 @@ This dataset is very popular for tutorials because with the current computing po
 
 ## Reference
 
-- https://en.wikipedia.org/wiki/MNIST_database
-- http://yann.lecun.com/exdb/mnist/
+- [https://en.wikipedia.org/wiki/MNIST_database](https://en.wikipedia.org/wiki/MNIST_database)
+- [http://yann.lecun.com/exdb/mnist/](http://yann.lecun.com/exdb/mnist/)
