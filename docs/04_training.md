@@ -23,7 +23,7 @@ When humans are born they already have some innate capabilities. For example new
 
 When a baby grows it learns in a completely unsupervised way. It learns to crawl, walk and talk just by trial and error and imitation. 
 
-When a child learns to talk it start to receive a much informative reward signal from his parents. 
+When a child learns to talk and understands language it starts to receive a much informative reward signal from his parents. 
 
 We as humans experience time as it passes and we have memories. The typical NN do not have any notion of time nor memories. 
 
