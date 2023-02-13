@@ -20,3 +20,20 @@ This seems true in the case of MNIST. If we extend the dataset by searching for 
 However I'm not sure if this holds for Large Language Models. They are trained with a very general objetive: to predict the next word. It seems that to solve that task the model needs to develop many abilities. In the Palm paper they say that if they scale the model and the data they see emerging capabilities in the model. 
 
 Thus according to the definition of Chollet a model trained on MNIST dataset is no intelligent. It does not have any adaptation capacity and it only knows to recognize digits. When presented with any other task it will completely fail.
+
+## Generalization
+
+Let's think if the model will generalize to new data.
+
+### Color data
+
+The model will likely work well with color images if they are previously transformed to gray scale. 
+
+However it will likely fail when using images with white background (contrary to the black background seen during training)
+We should use data augmentation if we expect to find inverted images on production.
+
+*The model is only going to work well on data that has similar properties to the train set.*
+
+### New symbols
+
+It is very likely that the model will missclassify new symbols that were not present on the train dataset.
