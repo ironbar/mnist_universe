@@ -26,3 +26,11 @@ The goal is to relate that to current NN models that do not interact with the wo
 > Humans evolved from apelike ancestors over a period of 6 million years. But in roughly the last 50k years something unique happened, which some call the Cognitive Revolution. Humans acquired the ability to modify their environment and their own abilities at a dramatically faster rate.
 
 > Their newly acquired causal imagination enabled them to do many things more efficiently through a tricky process called "planning".
+
+#### Probability
+
+> Decades' worth of experience with these kinds of questions has convinced me that, in both a cognitive and a philosophical sense, the idea of causes and effects is much more fundamental than the idea of probability. We begin learning causes and effects before we understand language and before we know any mathematics.
+
+> Probabilities, as given by expressions like `P(Y|X)', lie on the first rung of the Ladder of Causation and cannot ever (by themselves) answer queries on the second or third rung. 
+
+> While probabilities encode our beliefs about a static world, causality tells us whether and how probabilities change when the world changes, be it by intervention or by act of imagination.
