@@ -46,4 +46,5 @@ The goal is to relate that to current NN models that do not interact with the wo
 
 ![guinea-pig-path-analysis](http://jacheung.com/images/latest/path-analysis/guinea-pig-path-analysis.png)
 
+> You cannot draw causal conclusions without some causal hypotheses.This echoes what we concluded in Chapter 1: you cannot answer a question on rung two of the ladder of causation using only data collected from rung one.
 
