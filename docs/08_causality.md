@@ -34,3 +34,16 @@ The goal is to relate that to current NN models that do not interact with the wo
 > Probabilities, as given by expressions like `P(Y|X)', lie on the first rung of the Ladder of Causation and cannot ever (by themselves) answer queries on the second or third rung. 
 
 > While probabilities encode our beliefs about a static world, causality tells us whether and how probabilities change when the world changes, be it by intervention or by act of imagination.
+
+
+### 2. From Buccaneers to Guine Pigs
+
+#### Regression to the mean
+
+#### History of Pearson and his preference for correlation over causation
+
+#### Guinea pigs
+
+![guinea-pig-path-analysis](http://jacheung.com/images/latest/path-analysis/guinea-pig-path-analysis.png)
+
+
