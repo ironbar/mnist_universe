@@ -38,6 +38,8 @@ The goal is to relate that to current NN models that do not interact with the wo
 
 ### 2. From Buccaneers to Guine Pigs
 
+This chapter tells the history of how the dominant school of thought in statistics banned causality from science and instead advocated for correlation. It's interesting to see the influence of eminent statiticians. It also tells how Wright battled with them with his path analysis technique.
+
 #### Regression to the mean
 
 #### History of Pearson and his preference for correlation over causation
