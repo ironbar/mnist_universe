@@ -51,3 +51,19 @@ This chapter tells the history of how the dominant school of thought in statisti
 > You cannot draw causal conclusions without some causal hypotheses.This echoes what we concluded in Chapter 1: you cannot answer a question on rung two of the ladder of causation using only data collected from rung one.
 
 ### 3. From Evidence to Causes: Reverend Bayes meets Mr Holmes
+
+#### Bayes theorem
+
+> Bayer theorem shows that you can deduce the probability of a cause from an effect. If we know the cause it is easy to estimate the probability of the effect, which is a forward probability. Going the other direction is harder.
+
+For example if we have covid then we know the probability of having a positive result in a covid test (simply look at the FNR of the test). However computing the probability of having covid given that we know that the result of the test is positive is not straitghtforward.
+
+> We can estimate the conditional probability directly in one direction, for which our judgment is more reliable, and use mathematics to derive the conditional probability in the other direction, for which our judgment is rather hazy.
+
+$$ P(C|T) P(T) = P(T|C) P(C) $$
+
+$$ P(C|T) = \frac{P(T|C) P(C)}{P(T)} $$
+
+$$ P(C|T) = \frac{(1-FNR) P(C)}{(1-FNR) P(C) + FPR P(\neg C)} $$
+
+With that equation we can compute the probability of having covid given that the result of the test was positive.
