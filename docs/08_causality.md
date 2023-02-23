@@ -50,3 +50,4 @@ This chapter tells the history of how the dominant school of thought in statisti
 
 > You cannot draw causal conclusions without some causal hypotheses.This echoes what we concluded in Chapter 1: you cannot answer a question on rung two of the ladder of causation using only data collected from rung one.
 
+### 3. From Evidence to Causes: Reverend Bayes meets Mr Holmes
