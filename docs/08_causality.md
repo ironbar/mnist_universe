@@ -62,7 +62,7 @@ For example if we have covid then we know the probability of having a positive r
 
 $$ P(C|T) P(T) = P(T|C) P(C) $$
 
-$$ P(C|T) = \frac{P(T|C) P(C)}{P(T)} $$
+$$ P(C|T) = \frac{P(T|C) P(C)}{P(T)} = \frac{P(T|C)}{P(T)} P(C) $$
 
 $$ P(C|T) = \frac{(1-FNR) P(C)}{(1-FNR) P(C) + FPR P(\neg C)} $$
 
