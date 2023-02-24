@@ -72,7 +72,7 @@ There is an interesting example of mammogram test to check for breast cancer.
 
 Bayes theorem allows to update our prior belief about something using new information. The likelihood ratio modifies the initial belief.
 
-$$ P(C|T) = \frac{P(T|C)}{P(T)} P(C) = likelihood ratio P(C) $$
+$$ P(C|T) = \frac{P(T|C)}{P(T)} P(C) $$
 
 $$ likelihood ratio = \frac{P(T|C)}{P(T)} $$
 
