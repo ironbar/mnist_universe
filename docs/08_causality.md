@@ -67,3 +67,17 @@ $$ P(C|T) = \frac{P(T|C) P(C)}{P(T)} = \frac{P(T|C)}{P(T)} P(C) $$
 $$ P(C|T) = \frac{(1-FNR) P(C)}{(1-FNR) P(C) + FPR P(\neg C)} $$
 
 With that equation we can compute the probability of having covid given that the result of the test was positive.
+
+There is an interesting example of mammogram test to check for breast cancer.
+
+Bayes theorem allows to update our prior belief about something using new information. The likelihood ratio modifies the initial belief.
+
+$$ P(C|T) = \frac{P(T|C)}{P(T)} P(C) = likelihood ratio P(C) $$
+
+$$ likelihood ratio = \frac{P(T|C)}{P(T)} $$
+
+Then there is a tiny glimpse at bayesian networks
+
+> I felt convinced that any artificial intelligence would have to model itself on what we know about human neural information processing and that machine reasoning under uncertainty would have to be constructed with a similar message passing architecture. But what are the messages? This took me quite a few months to figure out. I finally realize that the messages were conditional probabilities in one direction and likelihood ratios in the other.
+
+#### Bayesian networks
