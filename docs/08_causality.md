@@ -25,6 +25,8 @@ The goal is to relate that to current NN models that do not interact with the wo
 
 #### Cognitive revolution
 
+![lion_man](res/lion_man.png)
+
 > The Lion Man is a 40k year old sculpture. Is different from previous art because is a creature of previous imagination. Within 10k years after the Lion Man's creation all other hominids had become extinct.
 
 <!-- -->
@@ -41,15 +43,15 @@ The goal is to relate that to current NN models that do not interact with the wo
 
 <!-- -->
 
-> Probabilities, as given by expressions like `P(Y|X)', lie on the first rung of the Ladder of Causation and cannot ever (by themselves) answer queries on the second or third rung. 
+> Probabilities, as given by expressions like $P(Y|X)$, lie on the first rung of the Ladder of Causation and cannot ever (by themselves) answer queries on the second or third rung.
 
 <!-- -->
 
 > While probabilities encode our beliefs about a static world, causality tells us whether and how probabilities change when the world changes, be it by intervention or by act of imagination.
 
-### 2. From Buccaneers to Guine Pigs
+### 2. From Buccaneers to Guinea Pigs
 
-This chapter tells the history of how the dominant school of thought in statistics banned causality from science and instead advocated for correlation. It's interesting to see the influence of eminent statiticians. It also tells how Wright battled with them with his path analysis technique.
+This chapter tells the history of how the dominant school of thought in statistics banned causality from science and instead advocated for correlation. It's interesting to see the influence of eminent statisticians. It also tells how Wright battled with them with his path analysis technique.
 
 #### Regression to the mean
 
