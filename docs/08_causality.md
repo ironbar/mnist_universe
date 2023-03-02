@@ -8,14 +8,18 @@ The goal is to relate that to current NN models that do not interact with the wo
 
 #### Ladder of causation
 
->First, very early in our evolution, we humans realized that the world is not made up only of dry facts(what we might call data today); rather these facts are glue together by an intrincate web of cause-effect relationships. 
+>First, very early in our evolution, we humans realized that the world is not made up only of dry facts(what we might call data today); rather these facts are glue together by an intrincate web of cause-effect relationships.  
 >Second, causal explanations, not dry facts, make up the bulk of our knowledge, and should be the cornerstone of machine intelligence.
 
 ![ladder_causation](https://hpccsystems.com/wp-content/uploads/2022/09/Ladder-1.png)
 
 > The goal of strong AI is to produce machines with humanlike intelligence, able to converse with and guide humans. Deep Learning has instead given us machines with truly impressive abilities but no intelligence. The difference is profound and lies in the absence of a model of reality.
 
+<!-- -->
+
 > The lack of flexibility and adaptability is inevitable in any system that works at the first level of the ladder of causation
+
+<!-- -->
 
 > A sufficiently strong and accurate causal model can allow us to use rung-one (observational) data to answer rung-two (interventional) queries
 
@@ -23,7 +27,11 @@ The goal is to relate that to current NN models that do not interact with the wo
 
 > The Lion Man is a 40k year old sculpture. Is different from previous art because is a creature of previous imagination. Within 10k years after the Lion Man's creation all other hominids had become extinct.
 
+<!-- -->
+
 > Humans evolved from apelike ancestors over a period of 6 million years. But in roughly the last 50k years something unique happened, which some call the Cognitive Revolution. Humans acquired the ability to modify their environment and their own abilities at a dramatically faster rate.
+
+<!-- -->
 
 > Their newly acquired causal imagination enabled them to do many things more efficiently through a tricky process called "planning".
 
@@ -31,10 +39,13 @@ The goal is to relate that to current NN models that do not interact with the wo
 
 > Decades' worth of experience with these kinds of questions has convinced me that, in both a cognitive and a philosophical sense, the idea of causes and effects is much more fundamental than the idea of probability. We begin learning causes and effects before we understand language and before we know any mathematics.
 
+<!-- -->
+
 > Probabilities, as given by expressions like `P(Y|X)', lie on the first rung of the Ladder of Causation and cannot ever (by themselves) answer queries on the second or third rung. 
 
-> While probabilities encode our beliefs about a static world, causality tells us whether and how probabilities change when the world changes, be it by intervention or by act of imagination.
+<!-- -->
 
+> While probabilities encode our beliefs about a static world, causality tells us whether and how probabilities change when the world changes, be it by intervention or by act of imagination.
 
 ### 2. From Buccaneers to Guine Pigs
 
@@ -94,10 +105,18 @@ Then there is a tiny glimpse at bayesian networks
 
 > Chain junction. In science one often thinks of B as the mechanism, or mediator that transmits the effect of A to C. A familiar example is Fire $\rightarrow$ Smoke $\rightarrow$ Alarm
 
+<!-- -->
+
 > Fork junction. B is often called a confounder of A and C. The confounder will make A and C statistically correlated even thought there is no direct causal link between them. A good example is Shoe Size $\leftarrow$ Age of child $\rightarrow$ Reading ability
+
+<!-- -->
 
 > We can eliminate this spurious correlation by conditioning on the child's age. If we look only at seven-years-olds we expect to see no relationship between shoe size and reading ability
 
+<!-- -->
+
 > Collider junction. Talent $\rightarrow$ Celebrity $\leftarrow$ Beauty. Here we are asserting that both talent and beauty contribute to an actor's success, but beauty and talnent are completely unrelated to one another in the general population.
+
+<!-- -->
 
 > In this case if we condition on B we will see a negative correlation between A and B. If we look only at famous actorss finding out that a celebrity is unnatractive increases our belief that he is talented.
