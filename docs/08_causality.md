@@ -92,4 +92,6 @@ Then there is a tiny glimpse at bayesian networks
 | Fork     | $A\leftarrow B\rightarrow C$  |
 | Collider | $A\rightarrow B\leftarrow C$  |
 
-> Chain junction. In science one often thinks of B as the mechanism, or mediator that transmits the effect of A to C. A familiar example is Fire -> Smoke -> Alarm
+> Chain junction. In science one often thinks of B as the mechanism, or mediator that transmits the effect of A to C. A familiar example is Fire $\rightarrow$ Smoke $\rightarrow$ Alarm
+
+> Fork junction. B is often called a confounder of A and C. The confounder will make A and C statistically correlated even thought there is no direct causal link between them. A good example is Shoe Size $\leftarrow$ Age of child $\rightarrow$ Reading ability
