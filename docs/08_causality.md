@@ -134,3 +134,24 @@ Then there is a tiny glimpse at bayesian networks
 > A bayesian network is integrative, which means that it reacts as a whole to any new information
 
 #### From Bayesian networks to causal diagrams
+
+> Bayesian networks hold the key that enables causal diagrams to interface with data. All the probabilistic properties and the belief propagation algorithms remain valid in causal diagrams.
+
+<!-- -->
+
+> In a causal diagram the direction of the arrows implies causality whereas on the bayesian networks it only implies the forward probability.
+
+<!-- -->
+
+> Causal assumptions cannot be invented at our whim, they are subject to the scrutiny of data and can be falsified (probed that they are wrong)
+
+<!-- -->
+
+> However the graphical properties of the diagram dictate which causal models can be distinguished by data and which will forever remain indistinguishable, no matter how large the data. For example we cannot distinguish the fork  $A\leftarrow B\rightarrow C$ from the chain $A\rightarrow B\rightarrow C$ by data alone because with C listening to B only, the two imply the same independence conditions.
+
+This is very interesting because it says that data is not enough to create a causal diagram. We need
+to make hypothesis about the causal model.
+
+> Whereas a Bayesian network can only tell us how likely one event is given that we observed another, causal diagrams can answer interventional and counterfactual questions.
+
+### 4. Confounding and deconfounding: Or, Slaying the Lurking Variable
