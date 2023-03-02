@@ -81,3 +81,15 @@ Then there is a tiny glimpse at bayesian networks
 > I felt convinced that any artificial intelligence would have to model itself on what we know about human neural information processing and that machine reasoning under uncertainty would have to be constructed with a similar message passing architecture. But what are the messages? This took me quite a few months to figure out. I finally realize that the messages were conditional probabilities in one direction and likelihood ratios in the other.
 
 #### Bayesian networks
+
+> A bayesian network carries no assumption that the arrow has a causal meaning. The arrow merely signifies that we know the "forward" probability. Baye's rule tells us how to reverse the procedure, specifically by multiplying the prior probability by a likelihood ratio.
+
+[Bayesian network on wikipedia](https://en.wikipedia.org/wiki/Bayesian_network)
+
+| Pattern  | Model                         |
+|----------|-------------------------------|
+| Chain    | $A\rightarrow B\rightarrow C$ |
+| Fork     | $A\leftarrow B\rightarrow C$  |
+| Collider | $A\rightarrow B\leftarrow C$  |
+
+> Chain junction. In science one often thinks of B as the mechanism, or mediator that transmits the effect of A to C. A familiar example is Fire -> Smoke -> Alarm
