@@ -120,3 +120,17 @@ Then there is a tiny glimpse at bayesian networks
 <!-- -->
 
 > In this case if we condition on B we will see a negative correlation between A and B. If we look only at famous actorss finding out that a celebrity is unnatractive increases our belief that he is talented.
+
+<!-- -->
+
+> The diagram describes the relation of the variables in a qualitative way, but if ou want quantitative answers you also need quantitative inputs.
+
+<!-- -->
+
+> By depicting A as a root noted we do not really mean that A has no prior causes. We really mean that any prior causes of A can be adequately summarized in the prior probability.
+
+<!-- -->
+
+> A bayesian network is integrative, which means that it reacts as a whole to any new information
+
+#### From Bayesian networks to causal diagrams
