@@ -159,3 +159,17 @@ to make hypothesis about the causal model.
 > Whereas a Bayesian network can only tell us how likely one event is given that we observed another, causal diagrams can answer interventional and counterfactual questions.
 
 ### 4. Confounding and deconfounding: Or, Slaying the Lurking Variable
+
+> We compare a group of people who get the treatment with a group of similar people who don't.
+
+<!-- -->
+
+> Confounding bias occurs when a variable influences both who is selected for the treatment and the outcome of the experiment
+
+<!-- -->
+
+> If the confounding variable Z is age, we compare the treatment and control groups in every age group separately. We can then take an average of the effects, weighting each age group according to its percentage in the target population. This method of compensation is familiar to all staticians; it is called "adjusting for Z" or "controlling for Z"
+
+<!-- -->
+
+> Although confounding has a long history in all areas of science, the recognition that the problem requires causal, not statistical, solutions is very recent.
