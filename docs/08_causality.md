@@ -188,7 +188,7 @@ to make hypothesis about the causal model.
 
 <!-- -->
 
-> Randomization brings two benefits: First it eliminates the confounder bias (it asks Nature the right question). SEcond it enables the researcher to quantify his uncertainty.
+> Randomization brings two benefits: First it eliminates the confounder bias (it asks Nature the right question). Second it enables the researcher to quantify his uncertainty.
 
 <!-- -->
 
@@ -203,3 +203,5 @@ to make hypothesis about the causal model.
 > Confounding should be simply defined as anything that leads to a discrepancy between the two $P(Y|X) \neq P(Y|do(X))$
 
 #### Back-door criterion
+
+> To deconfound two variables X and Y, we only need to to block every noncausal path between them without blocking or perturbing the causal paths. More precisely a _back-door path_ is any path from X to Y that starts with an arrow pointing into X. X and Y will be deconfounded if we block every back-door path. If we do this by controlling for some set of variables Z, we also need to make sure that no member of Z is a descendant of X on a causal path.
