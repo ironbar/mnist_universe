@@ -173,3 +173,33 @@ to make hypothesis about the causal model.
 <!-- -->
 
 > Although confounding has a long history in all areas of science, the recognition that the problem requires causal, not statistical, solutions is very recent.
+
+#### Randomized controlled trial
+
+> The one circumstance under which scientist will abandon some of their resistence to talk about causality is when they have conducted a randomized controlled trial
+
+<!-- -->
+
+> Around 1923 Fisher began to realize that the only experimental design that the nature genie could not defeat was a random one
+
+<!-- -->
+
+> Fisher realized that an uncertain answer to the right question is much better than a highly certain answer to the wrong question
+
+<!-- -->
+
+> Randomization brings two benefits: First it eliminates the confounder bias (it asks Nature the right question). SEcond it enables the researcher to quantify his uncertainty.
+
+<!-- -->
+
+> If you know what all the confounders are you can measure and adjust for them. However with randomization has the advantage of elminating unknown confounders or confounders that we cannot control
+
+<!-- -->
+
+> All things being equal RTC are still preferred to observational studies, just as safety nets are recommended for tighrope walkers. But in some cases intervention may not be possible. 
+
+#### Confounding
+
+> Confounding should be simply defined as anything that leads to a discrepancy between the two $P(Y|X) \neq P(Y|do(X))$
+
+#### Back-door criterion
