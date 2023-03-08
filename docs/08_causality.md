@@ -214,3 +214,52 @@ This are the rules to stop the flow of information throught any individual junct
 4. 4. Controlling for descendants of a variable is lieke partially controlling for the variable itself
 
 > I consider the complete solution of the confounding problem one of the main high-lights of the causal revolution
+
+### 5. The smoke-filled debate: clearing the air
+
+#### The problem of verifying that smoking caused cancer
+
+> one of the most important scientific arguments against the smoking-cancer hypothesis was the possible existence of unmeasured factors that cause both craving for nicotine and lung cancer.
+
+<!-- -->
+
+> some of the greatest milestones in medical history dealt with identifying causative agents. In the mid-1700s, James Lind had discovered that citrus fruits could prevent scurvy, and in the mid-1800s, John Snow had figured out that water contaminated with fecal matter caused cholera.
+
+<!-- -->
+
+> These brilliant pieces of detective work had in common a fortunate one-to-one relation between cause and effect.
+
+<!-- -->
+
+> The smoking-cancer debate challenged this monolithic concept of causation. Many people smoke their whole lives and never get lung cancer. Conversely, some people get lung cancer without ever lighting up a cigarette.
+
+<!-- -->
+
+> statisticians already knew of one excellent way to establish causation in a more general sense: the randomized controlled trial (RCT). But such a study would be neither feasible nor ethical in the case of smoking.
+
+#### How they arrived to a conclusion
+
+> He propose to compare patients who had already been diagnosed with cancer to a control group of healthy volunteers. The type of study Doll and Hill conducted is now called a case-control study because it compares “cases” (people with a disease) to controls. It is clearly an improvement over time series data, because researchers can control for confounders like age, sex, and exposure to environmental pollutants. This case-control design has the drawback of being retrospective: it tell us the probability that a cancer patient is a smoker instead of the probability that a smoker will get cancer.
+
+<!-- -->
+
+> Instead of drawing inferences by assuming the absence of certain causal relationships in the model, the analyst challenges such assumptions and evaluates how strong alternative relationships must be in order to explain the observed data. This technique is called today "sensitivity analysis"
+
+<!-- -->
+
+> To judge or evaluate the causal significance of the association between the attribute or agent and the disease, or effect upon health, a number of criteria must be utilized, no one of which is an all-sufficient basis for judgment.” The committee listed five such criteria: consistency (many studies, in different populations, show similar results); strength of association (including the dose-response effect: more smoking is associated with a higher risk); specificity of the association (a particular agent should have a particular effect and not a long litany of effects); temporal relationship (the effect should follow the cause); and coherence (biological plausibility and consistency with other types of evidence such as laboratory experiments and time series).
+
+<!-- -->
+
+> Viewed from the perspective of causality, the report was at best a modest success. It clearly established the gravity of causal questions and that data alone could not answer them. But as a roadmap for future discovery, its guidelines were uncertain and flimsy.
+
+<!-- -->
+
+> Cornfield’s inequality, which planted the seeds of sensitivity analysis, was a step in that direction.
+
+<!-- -->
+
+#### Paradox of smoking on newborns
+
+> By looking only at babies with low birth weight, we are conditioning on that collider. This opens up a back-door path between Smoking and Mortality that goes Smoking → Birth Weight ← Birth Defect → Mortality. This path is noncausal because one of the arrows goes the wrong way.
+
