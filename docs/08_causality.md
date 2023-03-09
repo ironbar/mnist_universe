@@ -263,3 +263,11 @@ This are the rules to stop the flow of information throught any individual junct
 
 > By looking only at babies with low birth weight, we are conditioning on that collider. This opens up a back-door path between Smoking and Mortality that goes Smoking → Birth Weight ← Birth Defect → Mortality. This path is noncausal because one of the arrows goes the wrong way.
 
+### 6. Paradoxes galore!
+
+This chapter is a collection of different paradoxes. It makes enphasys in the fact that data generation or selection process can cause correlations to appear:
+
+- Monty Hall problem
+- Simpson paradox
+- Berkson's paradox
+- Lord's paradox
