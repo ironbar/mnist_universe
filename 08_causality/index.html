@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ironbar.github.io/mnist_universe/08_causality/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Causality - MNIST Universe</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Causality";
+        var mkdocs_page_input_path = "08_causality.md";
+        var mkdocs_page_url = "/mnist_universe/08_causality/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WDV0QB6W7"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-4WDV0QB6W7');
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MNIST Universe
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">MNIST Universe</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../00_mnist_dataset/">MNIST Dataset</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_typical_training/">Typical training</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_data/">Data</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_model/">Model</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_training/">Training</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_artificial_intelligence/">Artificial Intelligence</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_ml_techniques/">Machine Learning techniques</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_emergence/">Emergence</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Causality</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#the-book-of-why">The Book of Why</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-the-ladder-of-causation">1. The Ladder of causation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#ladder-of-causation">Ladder of causation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cognitive-revolution">Cognitive revolution</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#probability">Probability</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-from-buccaneers-to-guinea-pigs">2. From Buccaneers to Guinea Pigs</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#regression-to-the-mean">Regression to the mean</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#history-of-pearson-and-his-preference-for-correlation-over-causation">History of Pearson and his preference for correlation over causation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#guinea-pigs">Guinea pigs</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-from-evidence-to-causes-reverend-bayes-meets-mr-holmes">3. From Evidence to Causes: Reverend Bayes meets Mr Holmes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#bayes-theorem">Bayes theorem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#bayesian-networks">Bayesian networks</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#from-bayesian-networks-to-causal-diagrams">From Bayesian networks to causal diagrams</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-confounding-and-deconfounding-or-slaying-the-lurking-variable">4. Confounding and deconfounding: Or, Slaying the Lurking Variable</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#randomized-controlled-trial">Randomized controlled trial</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#confounding">Confounding</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#back-door-criterion">Back-door criterion</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-the-smoke-filled-debate-clearing-the-air">5. The smoke-filled debate: clearing the air</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#the-problem-of-verifying-that-smoking-caused-cancer">The problem of verifying that smoking caused cancer</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#how-they-arrived-to-a-conclusion">How they arrived to a conclusion</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#paradox-of-smoking-on-newborns">Paradox of smoking on newborns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-paradoxes-galore">6. Paradoxes galore!</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MNIST Universe</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Causality</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Breadcrumb Navigation">
+        <a href="../07_emergence/" class="btn btn-neutral float-left" title="Emergence"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
+    </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="causality">Causality</h1>
+<h2 id="the-book-of-why"><a href="https://www.amazon.com/Book-Why-Science-Cause-Effect/dp/046509760X">The Book of Why</a></h2>
+<p>The goal is to relate that to current NN models that do not interact with the world.</p>
+<p>An agent can observe the result of its actions in the world and learn simple causality. It can also observe the results of actions of other agents.</p>
+<h3 id="1-the-ladder-of-causation">1. The Ladder of causation</h3>
+<h4 id="ladder-of-causation">Ladder of causation</h4>
+<blockquote>
+<p>First, very early in our evolution, we humans realized that the world is not made up only of dry facts(what we might call data today); rather these facts are glue together by an intrincate web of cause-effect relationships.<br />
+Second, causal explanations, not dry facts, make up the bulk of our knowledge, and should be the cornerstone of machine intelligence.</p>
+</blockquote>
+<p><img alt="ladder_causation" src="https://hpccsystems.com/wp-content/uploads/2022/09/Ladder-1.png" /></p>
+<blockquote>
+<p>The goal of strong AI is to produce machines with humanlike intelligence, able to converse with and guide humans. Deep Learning has instead given us machines with truly impressive abilities but no intelligence. The difference is profound and lies in the absence of a model of reality.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>The lack of flexibility and adaptability is inevitable in any system that works at the first level of the ladder of causation</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>A sufficiently strong and accurate causal model can allow us to use rung-one (observational) data to answer rung-two (interventional) queries</p>
+</blockquote>
+<h4 id="cognitive-revolution">Cognitive revolution</h4>
+<p><img alt="lion_man" src="../res/lion_man.png" /></p>
+<blockquote>
+<p>The Lion Man is a 40k year old sculpture. Is different from previous art because is a creature of previous imagination. Within 10k years after the Lion Man's creation all other hominids had become extinct.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Humans evolved from apelike ancestors over a period of 6 million years. But in roughly the last 50k years something unique happened, which some call the Cognitive Revolution. Humans acquired the ability to modify their environment and their own abilities at a dramatically faster rate.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Their newly acquired causal imagination enabled them to do many things more efficiently through a tricky process called "planning".</p>
+</blockquote>
+<h4 id="probability">Probability</h4>
+<blockquote>
+<p>Decades' worth of experience with these kinds of questions has convinced me that, in both a cognitive and a philosophical sense, the idea of causes and effects is much more fundamental than the idea of probability. We begin learning causes and effects before we understand language and before we know any mathematics.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Probabilities, as given by expressions like <script type="math/tex">P(Y|X)</script>, lie on the first rung of the Ladder of Causation and cannot ever (by themselves) answer queries on the second or third rung.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>While probabilities encode our beliefs about a static world, causality tells us whether and how probabilities change when the world changes, be it by intervention or by act of imagination.</p>
+</blockquote>
+<h3 id="2-from-buccaneers-to-guinea-pigs">2. From Buccaneers to Guinea Pigs</h3>
+<p>This chapter tells the history of how the dominant school of thought in statistics banned causality from science and instead advocated for correlation. It's interesting to see the influence of eminent statisticians. It also tells how Wright battled with them with his path analysis technique.</p>
+<h4 id="regression-to-the-mean">Regression to the mean</h4>
+<p>Many events are influenced by luck. Success is one of them, thus when events are repeated is unlikely to achieve and extraordinary good result.</p>
+<h4 id="history-of-pearson-and-his-preference-for-correlation-over-causation">History of Pearson and his preference for correlation over causation</h4>
+<h4 id="guinea-pigs">Guinea pigs</h4>
+<p><img alt="guinea-pig-path-analysis" src="http://jacheung.com/images/latest/path-analysis/guinea-pig-path-analysis.png" /></p>
+<blockquote>
+<p>You cannot draw causal conclusions without some causal hypotheses.This echoes what we concluded in Chapter 1: you cannot answer a question on rung two of the ladder of causation using only data collected from rung one.</p>
+</blockquote>
+<h3 id="3-from-evidence-to-causes-reverend-bayes-meets-mr-holmes">3. From Evidence to Causes: Reverend Bayes meets Mr Holmes</h3>
+<h4 id="bayes-theorem">Bayes theorem</h4>
+<blockquote>
+<p>Bayer theorem shows that you can deduce the probability of a cause from an effect. If we know the cause it is easy to estimate the probability of the effect, which is a forward probability. Going the other direction is harder.</p>
+</blockquote>
+<p>For example if we have covid then we know the probability of having a positive result in a covid test (simply look at the FNR of the test). However computing the probability of having covid given that we know that the result of the test is positive is not straitghtforward.</p>
+<blockquote>
+<p>We can estimate the conditional probability directly in one direction, for which our judgment is more reliable, and use mathematics to derive the conditional probability in the other direction, for which our judgment is rather hazy.</p>
+</blockquote>
+<p>
+<script type="math/tex; mode=display"> P(C|T) P(T) = P(T|C) P(C) </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> P(C|T) = \frac{P(T|C) P(C)}{P(T)} = \frac{P(T|C)}{P(T)} P(C) </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> P(C|T) = \frac{(1-FNR) P(C)}{(1-FNR) P(C) + FPR P(\neg C)} </script>
+</p>
+<p>With that equation we can compute the probability of having covid given that the result of the test was positive.</p>
+<p>There is an interesting example of mammogram test to check for breast cancer.</p>
+<p>Bayes theorem allows to update our prior belief about something using new information. The likelihood ratio modifies the initial belief.</p>
+<p>
+<script type="math/tex; mode=display"> P(C|T) = \frac{P(T|C)}{P(T)} P(C) </script>
+</p>
+<p>
+<script type="math/tex; mode=display"> likelihood ratio = \frac{P(T|C)}{P(T)} </script>
+</p>
+<p>Then there is a tiny glimpse at bayesian networks</p>
+<blockquote>
+<p>I felt convinced that any artificial intelligence would have to model itself on what we know about human neural information processing and that machine reasoning under uncertainty would have to be constructed with a similar message passing architecture. But what are the messages? This took me quite a few months to figure out. I finally realize that the messages were conditional probabilities in one direction and likelihood ratios in the other.</p>
+</blockquote>
+<h4 id="bayesian-networks">Bayesian networks</h4>
+<blockquote>
+<p>A bayesian network carries no assumption that the arrow has a causal meaning. The arrow merely signifies that we know the "forward" probability. Baye's rule tells us how to reverse the procedure, specifically by multiplying the prior probability by a likelihood ratio.</p>
+</blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Bayesian_network">Bayesian network on wikipedia</a></p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chain</td>
+<td>
+<script type="math/tex">A\rightarrow B\rightarrow C</script>
+</td>
+</tr>
+<tr>
+<td>Fork</td>
+<td>
+<script type="math/tex">A\leftarrow B\rightarrow C</script>
+</td>
+</tr>
+<tr>
+<td>Collider</td>
+<td>
+<script type="math/tex">A\rightarrow B\leftarrow C</script>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Chain junction</strong>. In science one often thinks of B as the mechanism, or mediator that transmits the effect of A to C. A familiar example is Fire <script type="math/tex">\rightarrow</script> Smoke <script type="math/tex">\rightarrow</script> Alarm</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p><strong>Fork junction</strong>. B is often called a confounder of A and C. The confounder will make A and C statistically correlated even thought there is no direct causal link between them. A good example is Shoe Size <script type="math/tex">\leftarrow</script> Age of child <script type="math/tex">\rightarrow</script> Reading ability</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>We can eliminate this spurious correlation by conditioning on the child's age. If we look only at seven-years-olds we expect to see no relationship between shoe size and reading ability</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p><strong>Collider junction</strong>. Talent <script type="math/tex">\rightarrow</script> Celebrity <script type="math/tex">\leftarrow</script> Beauty. Here we are asserting that both talent and beauty contribute to an actor's success, but beauty and talnent are completely unrelated to one another in the general population.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>In this case if we condition on B we will see a negative correlation between A and B. If we look only at famous actorss finding out that a celebrity is unnatractive increases our belief that he is talented.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>The diagram describes the relation of the variables in a qualitative way, but if ou want quantitative answers you also need quantitative inputs.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>By depicting A as a root noted we do not really mean that A has no prior causes. We really mean that any prior causes of A can be adequately summarized in the prior probability.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>A bayesian network is integrative, which means that it reacts as a whole to any new information</p>
+</blockquote>
+<h4 id="from-bayesian-networks-to-causal-diagrams">From Bayesian networks to causal diagrams</h4>
+<blockquote>
+<p>Bayesian networks hold the key that enables causal diagrams to interface with data. All the probabilistic properties and the belief propagation algorithms remain valid in causal diagrams.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>In a causal diagram the direction of the arrows implies causality whereas on the bayesian networks it only implies the forward probability.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Causal assumptions cannot be invented at our whim, they are subject to the scrutiny of data and can be falsified (probed that they are wrong)</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>However the graphical properties of the diagram dictate which causal models can be distinguished by data and which will forever remain indistinguishable, no matter how large the data. For example we cannot distinguish the fork  <script type="math/tex">A\leftarrow B\rightarrow C</script> from the chain <script type="math/tex">A\rightarrow B\rightarrow C</script> by data alone because with C listening to B only, the two imply the same independence conditions.</p>
+</blockquote>
+<p>This is very interesting because it says that data is not enough to create a causal diagram. We need
+to make hypothesis about the causal model.</p>
+<blockquote>
+<p>Whereas a Bayesian network can only tell us how likely one event is given that we observed another, causal diagrams can answer interventional and counterfactual questions.</p>
+</blockquote>
+<h3 id="4-confounding-and-deconfounding-or-slaying-the-lurking-variable">4. Confounding and deconfounding: Or, Slaying the Lurking Variable</h3>
+<blockquote>
+<p>We compare a group of people who get the treatment with a group of similar people who don't.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Confounding bias occurs when a variable influences both who is selected for the treatment and the outcome of the experiment</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>If the confounding variable Z is age, we compare the treatment and control groups in every age group separately. We can then take an average of the effects, weighting each age group according to its percentage in the target population. This method of compensation is familiar to all staticians; it is called "adjusting for Z" or "controlling for Z"</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Although confounding has a long history in all areas of science, the recognition that the problem requires causal, not statistical, solutions is very recent.</p>
+</blockquote>
+<h4 id="randomized-controlled-trial">Randomized controlled trial</h4>
+<blockquote>
+<p>The one circumstance under which scientist will abandon some of their resistence to talk about causality is when they have conducted a randomized controlled trial</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Around 1923 Fisher began to realize that the only experimental design that the nature genie could not defeat was a random one</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Fisher realized that an uncertain answer to the right question is much better than a highly certain answer to the wrong question</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Randomization brings two benefits: First it eliminates the confounder bias (it asks Nature the right question). Second it enables the researcher to quantify his uncertainty.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>If you know what all the confounders are you can measure and adjust for them. However with randomization has the advantage of elminating unknown confounders or confounders that we cannot control</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>All things being equal RTC are still preferred to observational studies, just as safety nets are recommended for tighrope walkers. But in some cases intervention may not be possible. </p>
+</blockquote>
+<h4 id="confounding">Confounding</h4>
+<blockquote>
+<p>Confounding should be simply defined as anything that leads to a discrepancy between the two <script type="math/tex">P(Y|X) \neq P(Y|do(X))</script>
+</p>
+</blockquote>
+<h4 id="back-door-criterion">Back-door criterion</h4>
+<blockquote>
+<p>To deconfound two variables X and Y, we only need to to block every noncausal path between them without blocking or perturbing the causal paths. More precisely a <em>back-door path</em> is any path from X to Y that starts with an arrow pointing into X. X and Y will be deconfounded if we block every back-door path. If we do this by controlling for some set of variables Z, we also need to make sure that no member of Z is a descendant of X on a causal path.</p>
+</blockquote>
+<p>This are the rules to stop the flow of information throught any individual junction:</p>
+<ol>
+<li>In a chain junction <script type="math/tex">A\rightarrow B\rightarrow C</script> controlling for B prevents information about A from getting to C or viceversa</li>
+<li>In a fork junction <script type="math/tex">A\rightarrow B\rightarrow C</script> controlling for B prevents information about A from getting to C or viceversa</li>
+<li>In a collider <script type="math/tex">A\rightarrow B\leftarrow C</script> the variables A and C start out independent, but if you control for B information starts flowing.</li>
+<li>
+<ol>
+<li>Controlling for descendants of a variable is lieke partially controlling for the variable itself</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>I consider the complete solution of the confounding problem one of the main high-lights of the causal revolution</p>
+</blockquote>
+<h3 id="5-the-smoke-filled-debate-clearing-the-air">5. The smoke-filled debate: clearing the air</h3>
+<h4 id="the-problem-of-verifying-that-smoking-caused-cancer">The problem of verifying that smoking caused cancer</h4>
+<blockquote>
+<p>one of the most important scientific arguments against the smoking-cancer hypothesis was the possible existence of unmeasured factors that cause both craving for nicotine and lung cancer.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>some of the greatest milestones in medical history dealt with identifying causative agents. In the mid-1700s, James Lind had discovered that citrus fruits could prevent scurvy, and in the mid-1800s, John Snow had figured out that water contaminated with fecal matter caused cholera.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>These brilliant pieces of detective work had in common a fortunate one-to-one relation between cause and effect.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>The smoking-cancer debate challenged this monolithic concept of causation. Many people smoke their whole lives and never get lung cancer. Conversely, some people get lung cancer without ever lighting up a cigarette.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>statisticians already knew of one excellent way to establish causation in a more general sense: the randomized controlled trial (RCT). But such a study would be neither feasible nor ethical in the case of smoking.</p>
+</blockquote>
+<h4 id="how-they-arrived-to-a-conclusion">How they arrived to a conclusion</h4>
+<blockquote>
+<p>He propose to compare patients who had already been diagnosed with cancer to a control group of healthy volunteers. The type of study Doll and Hill conducted is now called a case-control study because it compares “cases” (people with a disease) to controls. It is clearly an improvement over time series data, because researchers can control for confounders like age, sex, and exposure to environmental pollutants. This case-control design has the drawback of being retrospective: it tell us the probability that a cancer patient is a smoker instead of the probability that a smoker will get cancer.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Instead of drawing inferences by assuming the absence of certain causal relationships in the model, the analyst challenges such assumptions and evaluates how strong alternative relationships must be in order to explain the observed data. This technique is called today "sensitivity analysis"</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>To judge or evaluate the causal significance of the association between the attribute or agent and the disease, or effect upon health, a number of criteria must be utilized, no one of which is an all-sufficient basis for judgment.” The committee listed five such criteria: consistency (many studies, in different populations, show similar results); strength of association (including the dose-response effect: more smoking is associated with a higher risk); specificity of the association (a particular agent should have a particular effect and not a long litany of effects); temporal relationship (the effect should follow the cause); and coherence (biological plausibility and consistency with other types of evidence such as laboratory experiments and time series).</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Viewed from the perspective of causality, the report was at best a modest success. It clearly established the gravity of causal questions and that data alone could not answer them. But as a roadmap for future discovery, its guidelines were uncertain and flimsy.</p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Cornfield’s inequality, which planted the seeds of sensitivity analysis, was a step in that direction.</p>
+</blockquote>
+<!-- -->
+
+<h4 id="paradox-of-smoking-on-newborns">Paradox of smoking on newborns</h4>
+<blockquote>
+<p>By looking only at babies with low birth weight, we are conditioning on that collider. This opens up a back-door path between Smoking and Mortality that goes Smoking → Birth Weight ← Birth Defect → Mortality. This path is noncausal because one of the arrows goes the wrong way.</p>
+</blockquote>
+<h3 id="6-paradoxes-galore">6. Paradoxes galore!</h3>
+<p>This chapter is a collection of different paradoxes. It makes enphasys in the fact that data generation or selection process can cause correlations to appear:</p>
+<ul>
+<li>Monty Hall problem</li>
+<li>Simpson paradox</li>
+<li>Berkson's paradox</li>
+<li>Lord's paradox</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../07_emergence/" class="btn btn-neutral float-left" title="Emergence"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../07_emergence/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
