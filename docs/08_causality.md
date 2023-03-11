@@ -4,6 +4,8 @@
 
 The goal is to relate that to current NN models that do not interact with the world.
 
+An agent can observe the result of its actions in the world and learn simple causality. It can also observe the results of actions of other agents.
+
 ### 1. The Ladder of causation
 
 #### Ladder of causation
