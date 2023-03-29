@@ -276,14 +276,18 @@ This chapter is a collection of different paradoxes. It makes enphasys in the fa
 
 ### 7. Bejond Adjustment: The Conquest of Mount Intervention
 
-#### Back door adjustement formula
+#### Back door adjustment formula
 
 - Linear approximation
 - Regression coeficients
 
-#### Front door criterion
+#### Front door adjustmen
+
+- Mediating variables
 
 #### Do-calculus
+
+- 3 rules of do calculus
 
 #### Tapestry of science
 
