@@ -282,3 +282,9 @@ This chapter is a collection of different paradoxes. It makes enphasys in the fa
 - Regression coeficients
 
 #### Front door criterion
+
+#### Do-calculus
+
+#### Tapestry of science
+
+#### Good and bad colesterol
