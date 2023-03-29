@@ -273,3 +273,12 @@ This chapter is a collection of different paradoxes. It makes enphasys in the fa
 - Simpson paradox
 - Berkson's paradox
 - Lord's paradox
+
+### 7. Bejond Adjustment: The Conquest of Mount Intervention
+
+#### Back door adjustement formula
+
+- Linear approximation
+- Regression coeficients
+
+#### Front door criterion
