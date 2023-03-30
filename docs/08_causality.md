@@ -333,7 +333,7 @@ This chapter is a collection of different paradoxes. It makes enphasys in the fa
 
 <!-- -->
 
-> We know that if a set Z of variables blocks all back-door paths from X to Y, then conditional on Z, do(X) is equivalent to see(X). We can, therefore, write
+> Rule 2. We know that if a set Z of variables blocks all back-door paths from X to Y, then conditional on Z, do(X) is equivalent to see(X). We can, therefore, write
 
 <!-- -->
 
