@@ -306,14 +306,12 @@ This chapter is a collection of different paradoxes. It makes enphasys in the fa
 - Mediating variables
 
 > Instead of going in the back door, we can go in the front door! In this case, the front door is the direct causal path Smoking → Tar → Cancer, for which we do have data on all three variables. Intuitively, the reasoning is as follows. First, we can estimate the average causal effect of Smoking on Tar, because there is no unblocked back-door path from Smoking to Tar,
-
-<!-- -->
-
 > Likewise, the diagram allows us to estimate the average causal effect of Tar on Cancer. To do this we can block the back-door path from Tar to Cancer, Tar ← Smoking ← Smoking Gene → Cancer, by adjusting for Smoking.
+> Now we know the average increase in the likelihood of tar deposits due to smoking and the average increase of cancer due to tar deposits. We can combine these to obtain the average increase in cancer due to smoking.
 
 <!-- -->
 
-> Anytime the causal effect of X on Y is confounded by one set of variables (C) and mediated by another (M) (see Figure 7.2), and, furthermore, the mediating variables are shielded from the effects of C, then you can estimate X’s effect from observational data.
+> Anytime the causal effect of X on Y is confounded by one set of variables (C) and mediated by another (M) (see Figure 7.2), and, furthermore, the **mediating variables** are shielded from the effects of C, then you can estimate X’s effect from observational data.
 
 <!-- -->
 
