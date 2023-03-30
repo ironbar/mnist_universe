@@ -337,11 +337,13 @@ This chapter is a collection of different paradoxes. It makes enphasys in the fa
 
 <!-- -->
 
-> Rule 3 is quite simple: it essentially says that we can remove do(X) from P(Y | do(X)) in any case where there are no causal paths from X to Y. That is,
+> Rule 3 is quite simple: it essentially says that we can remove do(X) from P(Y | do(X)) in any case where there are no causal paths from X to Y. That is, if we do something that does not affect Y, then the probability distribution of Y will not change.
 
-<!-- -->
+Let's write the rules of do-calculus in mathematical format:
 
-> if we do something that does not affect Y, then the probability distribution of Y will not change.
+1. $P(Y | do(X), Z, W) = P(Y | do(X), Z)$  if $W$ is irrelevant to $Y$.
+2. $P(Y | do(X), Z) = P(Y | X, Z)$ if $Z$ blocks all back-door paths from $X$ to $Y$.
+3. $P(Y | do(X)) = P(Y)$ if $X$ does not affect $Y$.
 
 <!-- -->
 
@@ -350,7 +352,6 @@ This chapter is a collection of different paradoxes. It makes enphasys in the fa
 <!-- -->
 
 > It tells us that if we cannot find a way to estimate P(Y | do(X)) from Rules 1 to 3, then a solution does not exist. In that case, we know that there is no alternative to conducting a randomized controlled trial.
-
 
 #### Tapestry of science
 
