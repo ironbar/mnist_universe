@@ -276,18 +276,83 @@ This chapter is a collection of different paradoxes. It makes enphasys in the fa
 
 ### 7. Bejond Adjustment: The Conquest of Mount Intervention
 
+> In this chapter we finally make our bold ascent onto the second level of the Ladder of Causation, the level of intervention—the holy grail of causal thinking from antiquity to the present day. This level is involved in the struggle to predict the effects of actions and policies that haven’t been tried yet, ranging from medical treatments to social programs, from economic policies to personal choices.
+
 #### Back door adjustment formula
 
 - Linear approximation
 - Regression coeficients
 
-#### Front door adjustmen
+> For many researchers, the most (perhaps only) familiar method of predicting the effect of an intervention is to “control” for confounders using the adjustment formula. This is the method to use if you are confident that you have data on a sufficient set of variables (called deconfounders) to block all the back-door paths between the intervention and the outcome. To do this, we measure the average causal effect of an intervention by first estimating its effect at each “level,” or stratum, of the deconfounder. We then compute a weighted average of those strata, where each stratum is weighted according to its prevalence in the population. If, for example, the deconfounder is gender, we first estimate the causal effect for males and females. Then we average the two, if the population is (as usual) half male and half female.
+
+<!-- -->
+
+> In short, sometimes a regression coefficient represents a causal effect, and sometimes it does not—and you can’t rely on the data alone to tell you the difference. Two additional ingredients are required to endow rYX.Z with causal legitimacy. First, the path diagram should represent a plausible picture of reality, and second, the adjusted variable(s) Z should satisfy the back-door criterion.
+
+<!-- -->
+
+> Keep in mind also that the regression-based adjustment works only for linear models, which involve a major modeling assumption.
+
+<!-- -->
+
+> The back-door criterion tells us which sets of variables we can use to deconfound our data. The adjustment formula actually does the deconfounding.
+
+<!-- -->
+
+> adjustment does not work at all if there is a back-door path we cannot block because we don’t have the requisite data.
+
+#### Front door adjustment
 
 - Mediating variables
+
+> Instead of going in the back door, we can go in the front door! In this case, the front door is the direct causal path Smoking → Tar → Cancer, for which we do have data on all three variables. Intuitively, the reasoning is as follows. First, we can estimate the average causal effect of Smoking on Tar, because there is no unblocked back-door path from Smoking to Tar,
+
+<!-- -->
+
+> Likewise, the diagram allows us to estimate the average causal effect of Tar on Cancer. To do this we can block the back-door path from Tar to Cancer, Tar ← Smoking ← Smoking Gene → Cancer, by adjusting for Smoking.
+
+<!-- -->
+
+> Anytime the causal effect of X on Y is confounded by one set of variables (C) and mediated by another (M) (see Figure 7.2), and, furthermore, the mediating variables are shielded from the effects of C, then you can estimate X’s effect from observational data.
+
+<!-- -->
+
+> Glynn and Kashin’s results show why the front-door adjustment is such a powerful tool: it allows us to control for confounders that we cannot observe (like Motivation), including those that we can’t even name. RCTs are considered the “gold standard” of causal effect estimation for exactly the same reason.
 
 #### Do-calculus
 
 - 3 rules of do calculus
+
+> In both the front- and back-door adjustment formulas, the ultimate goal is to calculate the effect of an intervention, P(Y | do(X)), in terms of data such as P(Y | X, A, B, Z, …) that do not involve a do-operator. If we are completely successful at eliminating the do’s, then we can use observational data to estimate the causal effect, allowing us to leap from rung one to rung two of the Ladder of Causation.
+
+<!-- -->
+
+> our central question of when a model can replace an experiment, or when a “do” quantity can be reduced to a “see” quantity. Inspired by the ancient Greek geometers, we want to reduce the problem to symbol manipulation and in this way wrest causality from Mount Olympus and make it available to the average researcher.
+
+<!-- -->
+
+> Rule 1 says when we observe a variable W that is irrelevant to Y (possibly conditional on other variables Z), then the probability distribution of Y will not change.
+
+<!-- -->
+
+> We know that if a set Z of variables blocks all back-door paths from X to Y, then conditional on Z, do(X) is equivalent to see(X). We can, therefore, write
+
+<!-- -->
+
+> Rule 3 is quite simple: it essentially says that we can remove do(X) from P(Y | do(X)) in any case where there are no causal paths from X to Y. That is,
+
+<!-- -->
+
+> if we do something that does not affect Y, then the probability distribution of Y will not change.
+
+<!-- -->
+
+> Both groups independently and simultaneously proved that Rules 1 to 3 suffice to get out of any do-labyrinth that has an exit.
+
+<!-- -->
+
+> It tells us that if we cannot find a way to estimate P(Y | do(X)) from Rules 1 to 3, then a solution does not exist. In that case, we know that there is no alternative to conducting a randomized controlled trial.
+
 
 #### Tapestry of science
 
