@@ -355,4 +355,10 @@ Let's write the rules of do-calculus in mathematical format:
 
 #### Tapestry of science
 
-#### Good and bad colesterol
+Talks about the people that help develop the science of causality.
+
+#### Good and bad cholesterol
+
+Sometimes in RTC we also have to use do-calculus because people do not follow the treatment.
+
+## 8. Conterfactuals: mining worlds that could have been
