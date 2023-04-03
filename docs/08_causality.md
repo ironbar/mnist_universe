@@ -361,4 +361,10 @@ Talks about the people that help develop the science of causality.
 
 Sometimes in RTC we also have to use do-calculus because people do not follow the treatment.
 
-## 8. Conterfactuals: mining worlds that could have been
+### 8. Conterfactuals: mining worlds that could have been
+
+#### From Thucydides and Abraham to Hume and Lewis
+
+Review of conterfactual through history. An earthquake that caused a tsunami told by Thucdydides, the destruction of Sodoma and Gomorra if there are not enough rightfull men. And then talks about the definition of causation using conterfactuals.
+
+#### Potential outcomes, structural equations, and the algorithmization of conterfactuals
