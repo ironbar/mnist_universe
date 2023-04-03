@@ -368,3 +368,7 @@ Sometimes in RTC we also have to use do-calculus because people do not follow th
 Review of conterfactual through history. An earthquake that caused a tsunami told by Thucdydides, the destruction of Sodoma and Gomorra if there are not enough rightfull men. And then talks about the definition of causation using conterfactuals.
 
 #### Potential outcomes, structural equations, and the algorithmization of conterfactuals
+
+Again more histories about Fisher and the struggle between statistics and causation.
+
+Then explains the problem of estimating the salary of one person given the education and experience. The conclusion is that we need to design a causal model to estimate the effect.
