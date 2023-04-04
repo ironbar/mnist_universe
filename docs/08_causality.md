@@ -378,3 +378,7 @@ Then explains the problem of estimating the salary of one person given the educa
 Very confusing, maybe I lost the meaning on the previous section.
 
 #### Conterfactuals and the law
+
+Need to reread the chapter
+
+#### Necessary causes, sufficient causes and climate change
