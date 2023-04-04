@@ -382,3 +382,5 @@ Very confusing, maybe I lost the meaning on the previous section.
 Need to reread the chapter
 
 #### Necessary causes, sufficient causes and climate change
+
+#### A world of conterfactuals
