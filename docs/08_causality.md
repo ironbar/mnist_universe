@@ -371,11 +371,11 @@ Review of conterfactual through history. An earthquake that caused a tsunami tol
 
 Again more histories about Fisher and the struggle between statistics and causation.
 
-Then explains the problem of estimating the salary of one person given the education and experience. The conclusion is that we need to design a causal model to estimate the effect.
+Then explains the problem of estimating the salary of one person given the education and experience. The conclusion is that we need to use a causal model to estimate the effect. We can test a causal model to see if the independence relations hold.
 
 #### The virtue of seeing your assumptions
 
-Very confusing, maybe I lost the meaning on the previous section.
+In this chapter it explains another method, I don't see the value because it is very confusing compared to the simple diagrams.
 
 #### Conterfactuals and the law
 
