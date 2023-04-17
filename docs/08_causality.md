@@ -379,9 +379,11 @@ In this chapter it explains another method, I don't see the value because it is 
 
 #### Conterfactuals and the law
 
-Need to reread the chapter
+It talks about sufficient and necessary causes. For example in a firing squad either of the soldiers is sufficient to cause the prisoner's death, and neither (in itself) is necessary.
 
 #### Necessary causes, sufficient causes and climate change
+
+> Fraction of attributable risk (FAR) to quantify the effect of climate change. The FAR requires us to know two numbers: p0, the  probability of a heat wave like the 2003 heat wave before climate change, and p1 the probabililty after climate change. For examplme if the probability doubles, then we can say that half of the risk is due to climate change.
 
 #### A world of conterfactuals
 
