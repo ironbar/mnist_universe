@@ -396,3 +396,9 @@ It telss the story of scurvy and how it was discovered in 1800 that eating citru
 #### Nature versus nurture: the tragedy of Barbara Burks
 
 Tells the story of a woman that invented causal paths independently of Wright. 
+
+#### In search of a language (the Berkeley admissions paradox)
+
+Another story about a study of discrimination in a university. I don't see the point of telling this story.
+
+#### Daisy, the kittens and indirect effects
