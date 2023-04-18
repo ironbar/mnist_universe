@@ -394,3 +394,5 @@ It talks about sufficient and necessary causes. For example in a firing squad ei
 It telss the story of scurvy and how it was discovered in 1800 that eating citrus fruit prevented scurvy. However the mediation mechanism was not understood and that caused that 100 years later some expeditions suffered from scurvy because they started to believe that the problem was related to bad meat. In the early 1900s it was discovered that vitamine C that was present on citrus fruit was the mediator that prevented scurvy.
 
 #### Nature versus nurture: the tragedy of Barbara Burks
+
+Tells the story of a woman that invented causal paths independently of Wright. 
