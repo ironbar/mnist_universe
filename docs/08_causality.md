@@ -402,3 +402,17 @@ Tells the story of a woman that invented causal paths independently of Wright.
 Another story about a study of discrimination in a university. I don't see the point of telling this story.
 
 #### Daisy, the kittens and indirect effects
+
+## Course of Causal Inference
+
+I'm dissapointed with the "Book of Why", I believe it gives a lot of unnecessary information and when it comes to give the relevant information it is not clear and not enough emphasys. Moreover the notation is not well chosen and that makes understanding more difficult. 
+
+[https://www.bradyneal.com/causal-inference-course](https://www.bradyneal.com/causal-inference-course)
+
+The course is free and has:
+
+- Videos
+- Slides
+- Book
+
+
