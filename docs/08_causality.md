@@ -415,4 +415,13 @@ The course is free and has:
 - Slides
 - Book
 
+### 1. Introduction
+
+Very nice introduction to the topic
+
+### 2. Potential outcomes
+
+It explains the Fundamental Problem of Causal Inference: it is impossible to observe all potential outcomes for a given individual. 
+
+Then the rest of the chapter is devoted to study why the associational difference is not usually equal to the average treatment effect because of confounding. It explains under what assumptions and how we can estimate the average treatment effect.
 
