@@ -10,4 +10,4 @@ Regularization techniques impose some inductive bias to the models. We apply som
 
 ## Early stopping
 
-When using early stopping we will stop the training if the validation loss does not improve. It's a simple wait to avoid overfitting to the train set.
+When using early stopping we will stop the training if the validation loss does not improve. It's a simple way to avoid overfitting to the train set.
