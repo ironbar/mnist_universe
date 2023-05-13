@@ -1,6 +1,6 @@
 # Model
 
-An artificial neural network is just a parametric mathematical function. It receives some numbers as input and returns other numbers as input depending on the parameters of the function, which are typically called weights in the case of a neural network.
+An artificial neural network is just a parametric mathematical function. It receives some numbers as input and returns other numbers as output depending on the parameters of the function, which are typically called weights.
 
 In the case for the MNIST dataset the model will receive as input the value of the pixels of the images, and it will output a 10d vector representing the probability of the image being any of the digits from 0 to 9.
 
