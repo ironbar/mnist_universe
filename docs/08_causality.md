@@ -425,3 +425,19 @@ It explains the Fundamental Problem of Causal Inference: it is impossible to obs
 
 Then the rest of the chapter is devoted to study why the associational difference is not usually equal to the average treatment effect because of confounding. It explains under what assumptions and how we can estimate the average treatment effect.
 
+## Summary
+
+Causal Inference is the study of understanding the cause-and-effect relationships in data.
+
+Building a Directed Acyclic Graph (DAG) that represents the causal model typically requires a combination of domain knowledge, theoretical understanding, and, to some extent, data-driven insights. A DAG cannot be fully derived from data alone, as the causal relationships between variables are not inherently present in observational data.
+There might be multiple alternative causal models that cannot be falseable from data.
+
+Causal mechanisms describe the processes or pathways through which an effect is produced or a cause leads to an effect. These mechanisms often involve intermediate variables, also known as mediators, that transmit the causal effect from the independent variable (cause) to the dependent variable (effect).
+
+The ladder of causation is a three-level hierarchy of reasoning, introduced by Judea Pearl in "The Book of Why," that describes the stages of understanding causal relationships:
+
+1. Association (bottom rung): At this level, the focus is on observing correlations and patterns in the data. It involves detecting and measuring associations between variables using statistical methods, such as correlation coefficients, regressions, or contingency tables. However, association does not imply causation.
+1. Intervention (middle rung): This level goes beyond mere associations and seeks to understand the causal effects of interventions. It answers questions like "What if we do something?" or "What happens if we change a variable?" To understand causal effects, researchers often perform controlled experiments, like randomized controlled trials, or use observational data and methods like matching, instrumental variables, or difference-in-differences to estimate causal relationships.
+1. Counterfactuals (top rung): Counterfactual reasoning represents the highest level of causal understanding. It involves asking "What if" questions about alternative realities or hypothetical scenarios that did not occur but could have. Counterfactual reasoning allows us to compare the actual outcome under the observed intervention with the potential outcome under a different intervention. This level of reasoning enables us to make causal attributions, explain observed phenomena, and inform decision-making.
+
+I believe I have a good understanding of causality now. There is some math that I still don't understand but I believe I should put the focus on AI, and only if needed delve deeper into causality.
