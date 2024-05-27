@@ -63,7 +63,7 @@ Many events are influenced by luck. Success is one of them, thus when events are
 
 #### Guinea pigs
 
-![guinea-pig-path-analysis](http://jacheung.com/images/latest/path-analysis/guinea-pig-path-analysis.png)
+![guinea-pig-path-analysis](res/2024-05-27-10-14-22.png)
 
 > You cannot draw causal conclusions without some causal hypotheses.This echoes what we concluded in Chapter 1: you cannot answer a question on rung two of the ladder of causation using only data collected from rung one.
 
@@ -177,6 +177,10 @@ to make hypothesis about the causal model.
 > Although confounding has a long history in all areas of science, the recognition that the problem requires causal, not statistical, solutions is very recent.
 
 #### Randomized controlled trial
+
+> A randomized controlled trial (or randomized control trial; RCT) is a form of scientific experiment used to control factors not under direct experimental control. Participants who enroll in RCTs differ from one another in known and unknown ways that can influence study outcomes, and yet cannot be directly controlled. By randomly allocating participants among compared treatments, an RCT enables statistical control over these influences. Provided it is designed well, conducted properly, and enrolls enough participants, an RCT may achieve sufficient control over these confounding factors to deliver a useful comparison of the treatments studied.
+
+<!-- -->
 
 > The one circumstance under which scientist will abandon some of their resistence to talk about causality is when they have conducted a randomized controlled trial
 
