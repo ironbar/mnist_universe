@@ -10,7 +10,7 @@ An agent can observe the result of its actions in the world and learn simple cau
 
 #### Ladder of causation
 
->First, very early in our evolution, we humans realized that the world is not made up only of dry facts(what we might call data today); rather these facts are glue together by an intrincate web of cause-effect relationships.  
+>First, very early in our evolution, we humans realized that the world is not made up only of dry facts(what we might call data today); rather these facts are glue together by an intricate web of cause-effect relationships.  
 >Second, causal explanations, not dry facts, make up the bulk of our knowledge, and should be the cornerstone of machine intelligence.
 
 ![ladder_causation](https://hpccsystems.com/wp-content/uploads/2022/09/Ladder-1.png)
@@ -73,7 +73,7 @@ Many events are influenced by luck. Success is one of them, thus when events are
 
 > Bayer theorem shows that you can deduce the probability of a cause from an effect. If we know the cause it is easy to estimate the probability of the effect, which is a forward probability. Going the other direction is harder.
 
-For example if we have covid then we know the probability of having a positive result in a covid test (simply look at the FNR of the test). However computing the probability of having covid given that we know that the result of the test is positive is not straitghtforward.
+For example if we have covid then we know the probability of having a positive result in a covid test (simply look at the FNR of the test). However computing the probability of having covid given that we know that the result of the test is positive is not straightforward.
 
 > We can estimate the conditional probability directly in one direction, for which our judgment is more reliable, and use mathematics to derive the conditional probability in the other direction, for which our judgment is rather hazy.
 
@@ -121,11 +121,11 @@ Then there is a tiny glimpse at bayesian networks
 
 <!-- -->
 
-> **Collider junction**. Talent $\rightarrow$ Celebrity $\leftarrow$ Beauty. Here we are asserting that both talent and beauty contribute to an actor's success, but beauty and talnent are completely unrelated to one another in the general population.
+> **Collider junction**. Talent $\rightarrow$ Celebrity $\leftarrow$ Beauty. Here we are asserting that both talent and beauty contribute to an actor's success, but beauty and talent are completely unrelated to one another in the general population.
 
 <!-- -->
 
-> In this case if we condition on B we will see a negative correlation between A and B. If we look only at famous actorss finding out that a celebrity is unnatractive increases our belief that he is talented.
+> In this case if we condition on B we will see a negative correlation between A and B. If we look only at famous actors finding out that a celebrity is unattractive increases our belief that he is talented.
 
 <!-- -->
 
@@ -182,7 +182,7 @@ to make hypothesis about the causal model.
 
 <!-- -->
 
-> The one circumstance under which scientist will abandon some of their resistence to talk about causality is when they have conducted a randomized controlled trial
+> The one circumstance under which scientist will abandon some of their resistance to talk about causality is when they have conducted a randomized controlled trial
 
 <!-- -->
 
@@ -198,11 +198,11 @@ to make hypothesis about the causal model.
 
 <!-- -->
 
-> If you know what all the confounders are you can measure and adjust for them. However with randomization has the advantage of elminating unknown confounders or confounders that we cannot control
+> If you know what all the confounders are you can measure and adjust for them. However with randomization has the advantage of eliminating unknown confounders or confounders that we cannot control
 
 <!-- -->
 
-> All things being equal RTC are still preferred to observational studies, just as safety nets are recommended for tighrope walkers. But in some cases intervention may not be possible. 
+> All things being equal RTC are still preferred to observational studies, just as safety nets are recommended for tightrope walkers. But in some cases intervention may not be possible.
 
 #### Confounding
 
