@@ -215,7 +215,7 @@ to make hypothesis about the causal model.
 This are the rules to stop the flow of information throught any individual junction:
 
 1. In a chain junction $A\rightarrow B\rightarrow C$ controlling for B prevents information about A from getting to C or viceversa
-2. In a fork junction $A\rightarrow B\rightarrow C$ controlling for B prevents information about A from getting to C or viceversa
+2. In a fork junction $A\lefttarrow B\rightarrow C$ controlling for B prevents information about A from getting to C or viceversa
 3. In a collider $A\rightarrow B\leftarrow C$ the variables A and C start out independent, but if you control for B information starts flowing.
 4. 4. Controlling for descendants of a variable is lieke partially controlling for the variable itself
 
