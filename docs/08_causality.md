@@ -217,9 +217,9 @@ This are the rules to stop the flow of information throught any individual junct
 1. In a chain junction $A\rightarrow B\rightarrow C$ controlling for B prevents information about A from getting to C or viceversa
 2. In a fork junction $A\lefttarrow B\rightarrow C$ controlling for B prevents information about A from getting to C or viceversa
 3. In a collider $A\rightarrow B\leftarrow C$ the variables A and C start out independent, but if you control for B information starts flowing.
-4. 4. Controlling for descendants of a variable is lieke partially controlling for the variable itself
+4. 4. Controlling for descendants of a variable is like partially controlling for the variable itself
 
-> I consider the complete solution of the confounding problem one of the main high-lights of the causal revolution
+> I consider the complete solution of the confounding problem one of the main highlights of the causal revolution
 
 ### 5. The smoke-filled debate: clearing the air
 
@@ -271,21 +271,21 @@ This are the rules to stop the flow of information throught any individual junct
 
 ### 6. Paradoxes galore!
 
-This chapter is a collection of different paradoxes. It makes enphasys in the fact that data generation or selection process can cause correlations to appear:
+This chapter is a collection of different paradoxes. It makes emphasis in the fact that data generation or selection process can cause correlations to appear:
 
 - Monty Hall problem
 - Simpson paradox
 - Berkson's paradox
 - Lord's paradox
 
-### 7. Bejond Adjustment: The Conquest of Mount Intervention
+### 7. Beyond Adjustment: The Conquest of Mount Intervention
 
 > In this chapter we finally make our bold ascent onto the second level of the Ladder of Causation, the level of intervention—the holy grail of causal thinking from antiquity to the present day. This level is involved in the struggle to predict the effects of actions and policies that haven’t been tried yet, ranging from medical treatments to social programs, from economic policies to personal choices.
 
 #### Back door adjustment formula
 
 - Linear approximation
-- Regression coeficients
+- Regression coefficients
 
 > For many researchers, the most (perhaps only) familiar method of predicting the effect of an intervention is to “control” for confounders using the adjustment formula. This is the method to use if you are confident that you have data on a sufficient set of variables (called deconfounders) to block all the back-door paths between the intervention and the outcome. To do this, we measure the average causal effect of an intervention by first estimating its effect at each “level,” or stratum, of the deconfounder. We then compute a weighted average of those strata, where each stratum is weighted according to its prevalence in the population. If, for example, the deconfounder is gender, we first estimate the causal effect for males and females. Then we average the two, if the population is (as usual) half male and half female.
 
