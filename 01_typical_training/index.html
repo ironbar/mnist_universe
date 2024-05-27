@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ironbar.github.io/mnist_universe/01_typical_training/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Typical training - MNIST Universe</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Typical training";
+        var mkdocs_page_input_path = "01_typical_training.md";
+        var mkdocs_page_url = "/mnist_universe/01_typical_training/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WDV0QB6W7"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-4WDV0QB6W7");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MNIST Universe
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">MNIST Universe</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../00_mnist_dataset/">MNIST Dataset</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Typical training</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_data/">Data</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_model/">Model</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_training/">Training</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_artificial_intelligence/">Artificial Intelligence</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_ml_techniques/">Machine Learning techniques</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_emergence/">Emergence</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_causality/">Causality</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MNIST Universe</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Typical training</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Breadcrumb Navigation">
+        <a href="../00_mnist_dataset/" class="btn btn-neutral float-left" title="MNIST Dataset"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
+        <a href="../02_data/" class="btn btn-neutral float-right" title="Data">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
+    </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="typical-training">Typical training</h1>
+<p>Let's see how a typical training looks like. I will be using Keras for this example. I have prepared
+a <a href="https://colab.research.google.com/drive/1WaNldeUDzEI6MgpqIg_fLxH5IAMd8iJc?usp=sharing">Collab notebook</a>
+with all the code. The whole notebook runs in a few minutes.</p>
+<p>We just need numpy and keras for this experiment.</p>
+<pre><code class="language-python">import numpy as np
+from tensorflow import keras
+from tensorflow.keras import layers
+</code></pre>
+<p>The MNIST dataset is loaded and preprocessed.</p>
+<pre><code class="language-python">def load_data():
+    # Model / data parameters
+    num_classes = 10
+    input_shape = (28, 28, 1)
+
+    # the data, split between train and test sets
+    (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
+
+    # Scale images to the [0, 1] range
+    x_train = x_train.astype(&quot;float32&quot;) / 255
+    x_test = x_test.astype(&quot;float32&quot;) / 255
+    # Make sure images have shape (28, 28, 1)
+    x_train = np.expand_dims(x_train, -1)
+    x_test = np.expand_dims(x_test, -1)
+    print(&quot;x_train shape:&quot;, x_train.shape)
+    print(x_train.shape[0], &quot;train samples&quot;)
+    print(x_test.shape[0], &quot;test samples&quot;)
+
+    # convert class vectors to binary class matrices
+    y_train = keras.utils.to_categorical(y_train, num_classes)
+    y_test = keras.utils.to_categorical(y_test, num_classes)
+
+    return x_train, y_train, (x_test, y_test)
+</code></pre>
+<p>We define a very simple convolutional neural network architecture.</p>
+<pre><code class="language-python">def get_sample_model(input_shape=(28, 28, 1), num_classes=10):
+    model = keras.Sequential(
+        [
+            keras.Input(shape=input_shape),
+            layers.Conv2D(32, kernel_size=(3, 3), activation=&quot;relu&quot;),
+            layers.MaxPooling2D(pool_size=(2, 2)),
+            layers.Conv2D(64, kernel_size=(3, 3), activation=&quot;relu&quot;),
+            layers.MaxPooling2D(pool_size=(2, 2)),
+            layers.Flatten(),
+            layers.Dropout(0.5),
+            layers.Dense(num_classes, activation=&quot;softmax&quot;),
+        ]
+    )
+    return model
+</code></pre>
+<p>Finally we have the train function.</p>
+<pre><code class="language-python">def train_model_on_mnist(model, fit_kwargs=None, callbacks=None, compile_kwargs=None):
+    default_compile_kwargs = dict(loss=&quot;categorical_crossentropy&quot;, optimizer=&quot;adam&quot;, metrics=[&quot;accuracy&quot;])
+    if compile_kwargs is not None:
+        default_compile_kwargs.update(compile_kwargs)
+    model.compile(**default_compile_kwargs)
+
+    default_callbacks = [
+        keras.callbacks.ReduceLROnPlateau(monitor='loss', patience=10000),
+    ]
+    if callbacks is not None:
+        default_callbacks += callbacks
+
+    default_fit_kwargs = dict(verbose=0, epochs=1000, validation_data=test_data)
+    if fit_kwargs is not None:
+        default_fit_kwargs.update(fit_kwargs)
+    ret = model.fit(x_train, y_train,
+                    callbacks=default_callbacks, **default_fit_kwargs)
+    return ret.history
+</code></pre>
+<p>And we call the train function to fit the model.</p>
+<pre><code class="language-python">x_train, y_train, test_data = load_data()
+train_model_on_mnist(
+    get_sample_model(),
+    fit_kwargs=dict(batch_size=128, verbose=1, epochs=100),
+    compile_kwargs=dict(optimizer=keras.optimizers.Adam(1e-3)),
+    callbacks=[
+        keras.callbacks.TensorBoard(log_dir='logs'),
+        keras.callbacks.EarlyStopping(patience=15),]
+);
+</code></pre>
+<p>We can use Tensorboard to visualize the train (orange) and validation (blue) metrics during the training.</p>
+<p><img alt="mnist_training_metrics" src="../res/mnist_training_metrics.png" /></p>
+<p>Validation accuracy reaches 99.4% accuracy which is consistent with the state of the art.</p>
+<p>We have trained a neural network on the MNIST dataset, now let's think deeply about all the steps
+and its implications.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../00_mnist_dataset/" class="btn btn-neutral float-left" title="MNIST Dataset"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../02_data/" class="btn btn-neutral float-right" title="Data">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../00_mnist_dataset/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../02_data/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

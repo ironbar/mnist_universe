@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ironbar.github.io/mnist_universe/05_artificial_intelligence/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Artificial Intelligence - MNIST Universe</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Artificial Intelligence";
+        var mkdocs_page_input_path = "05_artificial_intelligence.md";
+        var mkdocs_page_url = "/mnist_universe/05_artificial_intelligence/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WDV0QB6W7"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-4WDV0QB6W7");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MNIST Universe
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">MNIST Universe</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../00_mnist_dataset/">MNIST Dataset</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_typical_training/">Typical training</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_data/">Data</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_model/">Model</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_training/">Training</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Artificial Intelligence</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#on-the-measure-of-intelligence">On the Measure of Intelligence</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#generalization">Generalization</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#color-data">Color data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#new-symbols">New symbols</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_ml_techniques/">Machine Learning techniques</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_emergence/">Emergence</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_causality/">Causality</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MNIST Universe</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Artificial Intelligence</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Breadcrumb Navigation">
+        <a href="../04_training/" class="btn btn-neutral float-left" title="Training"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
+        <a href="../06_ml_techniques/" class="btn btn-neutral float-right" title="Machine Learning techniques">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
+    </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="artificial-intelligence">Artificial Intelligence</h1>
+<p>We have seen how a typical AI training looks like. We already have a trained model: is this model intelligent?</p>
+<p>That model is performing some operation (classifying handwritten digits) that we do with our brains.
+Thus the model is emulating a tiny process of our brain and we could say that it is somehow intelligent.</p>
+<p>But in the other hand the model is just a mathematical function. It can only do a very specialized task.</p>
+<h2 id="on-the-measure-of-intelligence"><a href="https://arxiv.org/abs/1911.01547">On the Measure of Intelligence</a></h2>
+<blockquote>
+<p>The intelligence of a system is a measure of its skill-acquisition efficiency over a scope of tasks, with respect to priors, experience, and generalization difficulty.</p>
+</blockquote>
+<p>Chollet takes away the focus on skill (how good a model is on Go, chess, image classification…) and puts the focus on skill-acquisition efficiency. It says that if a task is fixed it it possible to buy arbitrary levels of skill given unlimited priors or unlimited training data. It argues that training on more data does not make the system more intelligent.</p>
+<blockquote>
+<p>Adding ever more data to a local-generalization learning system is certainly a fair strategy if one’s end goal is skill on the task considered, but it will not lead to generalization beyond the data the system has seen</p>
+</blockquote>
+<p>This seems true in the case of MNIST. If we extend the dataset by searching for more images for each category is very likely that we are going to improve the skill of the system but it won't be more intelligent.</p>
+<p>However I'm not sure if this holds for Large Language Models. They are trained with a very general objetive: to predict the next word. It seems that to solve that task the model needs to develop many abilities. In the Palm paper they say that if they scale the model and the data they see emerging capabilities in the model. </p>
+<p>Thus according to the definition of Chollet a model trained on MNIST dataset is no intelligent. It does not have any adaptation capacity and it only knows to recognize digits. When presented with any other task it will completely fail.</p>
+<h2 id="generalization">Generalization</h2>
+<p>Let's think if the model will generalize to new data.</p>
+<h3 id="color-data">Color data</h3>
+<p>The model will likely work well with color images if they are previously transformed to gray scale. </p>
+<p>However it will likely fail when using images with white background (contrary to the black background seen during training)
+We should use data augmentation if we expect to find inverted images on production.</p>
+<p><em>The model is only going to work well on data that has similar properties to the train set.</em></p>
+<h3 id="new-symbols">New symbols</h3>
+<p>It is very likely that the model will missclassify new symbols that were not present on the train dataset.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../04_training/" class="btn btn-neutral float-left" title="Training"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../06_ml_techniques/" class="btn btn-neutral float-right" title="Machine Learning techniques">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../04_training/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../06_ml_techniques/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

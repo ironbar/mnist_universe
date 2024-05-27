@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ironbar.github.io/mnist_universe/02_data/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Data - MNIST Universe</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Data";
+        var mkdocs_page_input_path = "02_data.md";
+        var mkdocs_page_url = "/mnist_universe/02_data/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WDV0QB6W7"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', "G-4WDV0QB6W7");
+      </script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> MNIST Universe
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">MNIST Universe</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../00_mnist_dataset/">MNIST Dataset</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_typical_training/">Typical training</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#train-validation-and-test-data">Train, validation and test data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#real-data-is-noisy">Real data is noisy</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_model/">Model</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_training/">Training</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_artificial_intelligence/">Artificial Intelligence</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_ml_techniques/">Machine Learning techniques</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_emergence/">Emergence</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_causality/">Causality</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">MNIST Universe</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Data</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Breadcrumb Navigation">
+        <a href="../01_typical_training/" class="btn btn-neutral float-left" title="Typical training"><span class="icon icon-circle-arrow-left" aria-hidden="true"></span> Previous</a>
+        <a href="../03_model/" class="btn btn-neutral float-right" title="Model">Next <span class="icon icon-circle-arrow-right" aria-hidden="true"></span></a>
+    </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="data">Data</h1>
+<p>The model sees pairs of images and labels during training. For example it receives an image of a handwritten 0 and a label indicating that it is a 0.</p>
+<p>Thus the model only has access to a very limited subset of the universe. It does not have access to letters, animals, sounds...<br />
+The dataset has many particular characteristics that will influence how well the model generalizes to new data. For example the images are grayscale, the numbers are centered...</p>
+<p>Also the model will not experience any <strong>notion of time</strong>. When a human is learning the numbers there is a time continuity on the senses inputs. If I see some numbers on a book those numbers won't change. I will be able
+to see them from different perspectives, distances and orientations.<br />
+By contrary the inputs to the model change randomly: there is no relation between the image the model receives at one step and the next.</p>
+<p>In general a dataset is a biased and partial subset of the real world. A model trained on a dataset will learn the particularities of the dataset and because of that the performance of the model will be lower when being evaluated on a different dataset (with different biases).</p>
+<h2 id="train-validation-and-test-data">Train, validation and test data</h2>
+<p>It is very common on machine learnig to partition the data on three disjoint subsets that are called train, validation and test.</p>
+<ul>
+<li><strong>train</strong>: this is the data that the model will use to "learn", to fit its parameters. We can evaluate the model
+  on this train data but this evaluation will have a very weak relation to the performance of the model with new data.
+  Neural network models can have an arbitrary capacity and are able to memorize the train set and achieve a perfect score.</li>
+<li><strong>validation</strong>: while training or at the end of the train we will evaluate our model on the validation data. This evaluation
+  will be a more faithfull representation of how the model works with new data. We can use the validation score to guide the
+  optimization of the hyperparameters of the model. However since we are doing multiple evaluations on the validation set there
+  is information flowing to the model and we could not trust the validation score after many evaluations.</li>
+<li><strong>test</strong>: when we have optimized the model using the validation scores then we could use the test to have a real estimation of how
+  the model will work with new data.</li>
+</ul>
+<p>This process has some similarities to how a student prepares for a exam. The training set would be the books, video and other learning resources. The validation set would be exams from previous years. The real exam of that year would be the test set.
+If the student does a previous years' exam more than one time the score obtained on the following evaluations won't be a good estimator of the score on the real exam.</p>
+<h2 id="real-data-is-noisy">Real data is noisy</h2>
+<p>In an ideal world all the samples in a dataset will have correct labels. That is hardly the case in
+the real world. It is likely that even the famous MNIST dataset has wrong labels<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>: for example an image
+of a one labelled as a seven.</p>
+<p>This can happen both for human errors or for ambiguity in the definition of the problem. If the handwriting
+is not clear we could misclassify a seven by a one, or a nine by a four.</p>
+<p>A model with enough capacity trained on noisy data could achieve perfect accuracy by memorizing the errors.
+This makes the learning process harder because there are contradictions in the dataset. In those cases
+taking time to clean the dataset will usually pay off. There is a data-centric movement championed by Andrew Ng
+that places the focus on the data instead of the model.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Even the MNIST dataset, assumed to be error-free and benchmarked in tens of thousands of peer-reviewed ML publications, contains 15 (human-validated) label errors in the test set. <a href="https://l7.curtisnorthcutt.com/label-errors">https://l7.curtisnorthcutt.com/label-errors</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../01_typical_training/" class="btn btn-neutral float-left" title="Typical training"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../03_model/" class="btn btn-neutral float-right" title="Model">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../01_typical_training/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../03_model/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
